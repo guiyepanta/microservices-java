@@ -1,0 +1,320 @@
+{
+  "info": {
+    "_postman_id": "f2b3cbeb-c9eb-4edc-953d-7dcb910276f7",
+    "name": "microservicios",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "9413072"
+  },
+  "item": [
+    {
+      "name": "gateway - Get User {id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9876/user-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "user-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - Get User all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9876/user-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "user-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - get product {id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9876/product-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "product-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - get product all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9876/product-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "product-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - get product all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9876/order-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "order-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - Add order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": 1,\r\n    \"orderLines\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 2,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 3,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9876/order-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "order-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "order-service - Add order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": 1,\r\n    \"orderLines\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 2,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 3,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://order-service:7777/order-service/",
+          "protocol": "http",
+          "host": [
+            "order-service"
+          ],
+          "port": "7777",
+          "path": [
+            "order-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "gateway - get order {id}",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"userId\": 1,\r\n    \"orderLines\": [\r\n        {\r\n            \"productId\": 1,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 2,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"productId\": 3,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9876/order-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9876",
+          "path": [
+            "order-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user-service - Get {id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5555/user-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5555",
+          "path": [
+            "user-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "user-service - Get all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5555/user-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5555",
+          "path": [
+            "user-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "product-service - get {id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6666/product-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6666",
+          "path": [
+            "product-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "product-service - get all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:6666/product-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6666",
+          "path": [
+            "product-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "order-service - get {id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7777/order-service/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "order-service",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "order-service - get all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:7777/order-service/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "7777",
+          "path": [
+            "order-service",
+            ""
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
